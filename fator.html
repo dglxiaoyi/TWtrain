@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv='content-type' content='text/html;charset=utf-8' />
+		<title>国际通用莫版</title>
+		<meta name='keyword' content='关键词，关键词'/>
+		<meta name='description' content=''/>
+		<link rel="stylesheet" type="text/css" href="">
+	</head>
+	<body>
+		<script type="text/javascript">
+			(function(){
+				var  fators = [];
+				function fator(num){
+					for (var i = 2; i <= num; i++) {
+						if (num%i == 0) {
+							fators.push(i);
+							fator(num/i);
+							break;
+						}
+					}
+					return fators;
+				}
+				var n = 90;
+				result = fator(n);
+				console.log(n+'的因子为'+result);
+
+			})();
+		</script>
+	</body>
+</html>
