@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div>13</div>
+    <script>
+        (function(){
+            var n = 10;
+            var result = [0,1];
+            function feibo(N){
+                for(var i = 2 ; i < N ; i++){
+                    result.push(result[i-1]+result[i-2]);
+                }
+            }
+            feibo(n);
+            console.log(result);
+            var str = '斐波纳契数列中第 '+n+' 个数是'+result[n-1];
+            console.log(str);
+        })();
+    </script>
+</body>
+</html>
