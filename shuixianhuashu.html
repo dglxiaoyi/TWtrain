@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv='content-type' content='text/html;charset=utf-8' />
+		<title>水仙花数</title>
+		<meta name='keyword' content='关键词，关键词'/>
+		<meta name='description' content=''/>
+		<link rel="stylesheet" type="text/css" href="">
+	</head>
+	<body>
+		<script type="text/javascript">
+			function shuixianhua() {
+				var num = 100;
+				var result = [];
+				for (; num < 1000; num++) {
+					var bai = Math.floor(num/100);
+					var shi = Math.floor(num%100/10);
+					var ge  = num%10;
+					if (num === bai*bai*bai + shi*shi*shi +  ge*ge*ge){
+						result.push(num);
+					}
+				}
+				return result;
+			}
+			var shuixian = shuixianhua();
+			console.log('所有的水仙花数为'+shuixian);
+		</script>
+	</body>
+</html>
