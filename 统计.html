@@ -12,8 +12,7 @@
 			var arr = [1 , 3 , 7 , 14 , 1 , 1 , 1] ,
 				item = 1;
 			function tongji(arr, item) {
-				var newarr = arr.filter(num => num===item);
-				return newarr;
+				return arr.filter(num => num===item);
 			}
 			var result = tongji(arr, item);
 			console.log('数组['+arr+']\n中'+item+'的个数为：'+result.length);
