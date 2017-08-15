@@ -10,13 +10,13 @@
 	<body>
 		<script type="text/javascript">
 			var array = [1,2,3,4,5,6,7,8,9,10,11];
-			function zhongweishu(arr) {
-				arr = arr.sort( (a,b) => a-b );
+			function zhongweishu(array) {
+				var arr = array.sort( (a,b) => a-b );
 				var len = arr.length;
 				return len%2?arr[Math.floor(len/2)]:(arr[ len/2 - 1] + arr[ len / 2])/2;
 			}
 			var result = zhongweishu(array);
-			console.log(result);
+			console.log(array+'\n的中位数是\t '+result);
 		</script>
 	</body>
 </html>
