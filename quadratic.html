@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv='content-type' content='text/html;charset=utf-8' />
+		<title>为数组 arr 中的每个元素求二次方。不要直接修改数组 arr，结果返回新的数组</title>
+		<meta name='keyword' content='关键词，关键词'/>
+		<meta name='description' content=''/>
+		<link rel="stylesheet" type="text/css" href="">
+	</head>
+	<body>
+		<script type="text/javascript">
+			var arr = [5, 3, 7, 1];
+			function quadratic(arr){
+				return arr.map(num=>num*num);
+			}
+			var result = quadratic(arr);
+			console.log('原数组：'+arr);
+			console.log('新数组：'+result);
+		</script>
+	</body>
+</html>
