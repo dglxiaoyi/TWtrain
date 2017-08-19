@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv='content-type' content='text/html;charset=utf-8' />
+		<title>数组去重</title>
+		<meta name='keyword' content='关键词，关键词'/>
+		<meta name='description' content=''/>
+		<link rel="stylesheet" type="text/css" href="">
+	</head>
+	<body>
+		<script type="text/javascript">
+			var arr = ['s', 'a', 's', 'b', 'a',1,'1',1];
+			function normalization(arr){
+				let result = [];
+				arr.forEach(item=>{
+					if(result.indexOf(item)==-1){
+						result.push(item);
+					}
+				});
+				return result;
+			}
+			var result = normalization(arr);
+			console.log(arr);
+			console.log(result);
+		</script>
+	</body>
+</html>
