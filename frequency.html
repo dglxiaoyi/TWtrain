@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv='content-type' content='text/html;charset=utf-8' />
+		<title>判断一个字符串中出现次数最多的字符，并统计次数</title>
+		<meta name='keyword' content='关键词，关键词'/>
+		<meta name='description' content=''/>
+		<link rel="stylesheet" type="text/css" href="">
+	</head>
+	<body>
+		<script type="text/javascript">
+			var str1 = 'abcsbaddbizdbas';
+			var str2 = 'aaaaabbdbdbb';
+			function frequency(str){
+				let statistics = {};
+				arr = str.split('');
+				arr.forEach((item,index)=>{
+					if(statistics[item]===undefined){
+						statistics[item]=1;
+					}else{
+						statistics[item]+=1;
+					}
+				});
+				var x = 0;
+				var result = {};
+				for(var key in statistics){
+					if(x<statistics[key]){
+						result = {};
+						result[key] = statistics[key];
+						x = Math.max(x,result[key]);
+					}else if(x==statistics[key]){
+						result[key] = statistics[key];
+					}
+				}
+				return result;
+			}
+			var result1 = frequency(str1);
+			var result2 = frequency(str2);
+			console.log(str1);
+			console.log(result1);
+			console.log(str2);
+			console.log(result2);
+		</script>
+	</body>
+</html>
