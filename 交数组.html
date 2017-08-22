@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv='content-type' content='text/html;charset=utf-8' />
+		<title>计算两个数组的交数组</title>
+		<meta name='keyword' content='关键词，关键词'/>
+		<meta name='description' content=''/>
+		<link rel="stylesheet" type="text/css" href="">
+	</head>
+	<body>
+		<script type="text/javascript">
+			var nums1 = [1, 2, 2, 1], nums2 = [2, 2];
+			function intersection(arr1,arr2) {
+				let result = [];
+				let array2 = arr2.slice(0);
+				arr1.forEach((num)=>{
+					if(array2.includes(num)){
+						result = result.concat(array2.splice(array2.indexOf(num),1));
+					}
+				});
+				return result;
+			}
+			var result = intersection(nums1,nums2);
+			console.log('数组1：\r'+nums1);
+			console.log('数组2：\r'+nums2);
+			console.log('交数组：\r'+result);
+		</script>
+	</body>
+</html>
