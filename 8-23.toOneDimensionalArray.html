@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv='content-type' content='text/html;charset=utf-8' />
+		<title>给定一个数组，该数组中的每个元素要么是个数组，要么是整数。将其变成一个只包含整数的简单数组。</title>
+		<meta name='keyword' content='关键词，关键词'/>
+		<meta name='description' content=''/>
+		<link rel="stylesheet" type="text/css" href="">
+	</head>
+	<body>
+		<script type="text/javascript">
+			var arr1 = [1,2,[1,2]], arr2 = [1,2,[1,2],[3,4,[2,5]]], arr3 = [4,[3,[2,[1]]]];
+			function toOneDimensionalArray(arr){
+				let array = arr.slice(0);
+				return array.join('-').split(',').join('-').split('-').map(num=>num*1);
+			}
+			var result1 = toOneDimensionalArray(arr1);
+			var result2 = toOneDimensionalArray(arr2);
+			var result3 = toOneDimensionalArray(arr3);
+			console.log(result1);
+			console.log(result2);
+			console.log(result3);
+		</script>
+	</body>
+</html>
