@@ -11,7 +11,7 @@
 		<script type="text/javascript">
 			function leftpad(name,number,item){
 				let result = [];
-				for (var i = 0; i < number; i++) {
+				for (var i = 0; i < number - name.length; i++) {
 					result.push(item);
 				}
 				result.push(name);
