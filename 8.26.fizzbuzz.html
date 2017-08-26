@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv='content-type' content='text/html;charset=utf-8' />
+		<title>fizzbuzz</title>
+		<meta name='keyword' content='关键词，关键词'/>
+		<meta name='description' content=''/>
+		<link rel="stylesheet" type="text/css" href="">
+	</head>
+	<body>
+		<script type="text/javascript">
+			var n = 15;
+			fizzbuzz(n);
+			function fizzbuzz(max){
+				let result = '';
+				for (var i = 1; i <= max; i++) {
+					result = '';
+					if(i%3===0){
+						result += 'fizz '
+					}
+					if (i%5===0) {
+						result += 'buzz '
+					}
+					console.log(result?result:i);
+				}
+			}
+		</script>
+	</body>
+</html>
