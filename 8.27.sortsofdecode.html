@@ -2,13 +2,21 @@
 <html>
 	<head>
 		<meta http-equiv='content-type' content='text/html;charset=utf-8' />
-		<title>给定编码如下，给出一个整数,返回解码方法的种数；</title>
+		<title>给定编码，给出一个整数,返回解码方法的种数；</title>
 		<meta name='keyword' content='关键词，关键词'/>
 		<meta name='description' content=''/>
 		<link rel="stylesheet" type="text/css" href="">
 	</head>
 	<body>
 		<script type="text/javascript">
+		/*例如：
+			给你的数12，有两种方式解码 AB(12) 或者 L(12). 所以返回 2
+		解码规则：
+			1-> 'A’
+			2-> ‘B’
+			…
+			26-> ‘Z’
+		*/
 			function sortsOfDecode(num){
 				let arr = (num+'').split('');
 				let result = 1;
