@@ -19,16 +19,23 @@
 		*/
 			function sortsOfDecode(num){
 				let arr = (num+'').split('');
-				let result = 1;
-				for(var i = 0 ; i < arr.length-1 ; i++){
-					if (arr[i]+arr[i+1] <27) {
-						result += 1;
-					}
-				}
-				return result;
+				let result = ['9'];
+				arr.forEach(num=>{
+					result.forEach((item,index)=>{
+						if(item+num<27){
+							result.push(item+num);
+						}else{
+							result[index] = num;
+						}
+
+					});
+				});
+				console.log(result);
+				return result.length;
 			}
-			var result = sortsOfDecode(1111);
-			console.log(result);
+			var num = 1112;
+			console.log(num);
+			console.log(sortsOfDecode(num));
 		</script>
 	</body>
 </html>
