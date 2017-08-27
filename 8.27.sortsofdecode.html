@@ -18,8 +18,19 @@
 			26-> ‘Z’
 		*/
 			function sortsOfDecode(num){
-				let arr = (num+'').split('');
+				let array = (num+'').split('');
+				let arr = [];
 				let result = ['9'];
+				array.forEach((num,index)=>{
+					if (num==0) {
+						arr[arr.length-1] = array[index-1]+'0';
+					}else{
+						arr.push(num);
+					}
+				});
+				if(arr.some(num=>num*1>10)){
+					return 0;
+				}
 				arr.forEach(num=>{
 					result.forEach((item,index)=>{
 						if(item+num<27){
@@ -33,7 +44,7 @@
 				console.log(result);
 				return result.length;
 			}
-			var num = 1112;
+			var num = 1130;
 			console.log(num);
 			console.log(sortsOfDecode(num));
 		</script>
