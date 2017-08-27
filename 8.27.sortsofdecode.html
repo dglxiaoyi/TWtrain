@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv='content-type' content='text/html;charset=utf-8' />
+		<title>给定编码如下，给出一个整数,返回解码方法的种数；</title>
+		<meta name='keyword' content='关键词，关键词'/>
+		<meta name='description' content=''/>
+		<link rel="stylesheet" type="text/css" href="">
+	</head>
+	<body>
+		<script type="text/javascript">
+			function sortsOfDecode(num){
+				let arr = (num+'').split('');
+				let result = 1;
+				for(var i = 0 ; i < arr.length-1 ; i++){
+					if (arr[i]+arr[i+1] <27) {
+						result += 1;
+					}
+				}
+				return result;
+			}
+			var result = sortsOfDecode(1111);
+			console.log(result);
+		</script>
+	</body>
+</html>
